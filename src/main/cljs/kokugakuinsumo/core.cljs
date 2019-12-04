@@ -13,7 +13,11 @@
             [kokugakuinsumo.database]
             [kokugakuinsumo.views.app :refer [app]]))
 
+(secretary/set-config! :prefix "#")
+
 (secretary/defroute "/" []
+  (dispatch [:set-current-page :top-page]))
+(secretary/defroute "/home" []
   (dispatch [:set-current-page :top-page]))
 (secretary/defroute "/about" []
   (dispatch [:set-current-page :about-page]))
@@ -35,7 +39,9 @@
 
 (defn init! []
   (accountant/configure-navigation!
-    {:nav-handler (fn [path] (secretary/dispatch! path))
+    {:nav-handler  (fn [path]
+                     (let [[_ fragment] (re-find #"#(.*)" path)]
+                       (secretary/dispatch! (or fragment "/"))))
      :path-exists? (fn [path] (secretary/locate-route path))})
   (accountant/dispatch-current!)
   (dispatch-sync [:initialize])

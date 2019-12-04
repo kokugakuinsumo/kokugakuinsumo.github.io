@@ -8,15 +8,15 @@
             [cljsjs.react-bootstrap]))
 
 (defn header []
-  (let [menu [{:name "" :link "/" :icon "glyphicon glyphicon-home"}
-              {:name "About" :link "/about"}
-              {:name "Member" :link "/member"}
-              {:name "Photo" :link "/photo"}
-              {:name "Record" :link "/record"}
-              {:name "Schedule" :link "/schedule"}
+  (let [menu [{:name "" :link "#/home" :icon "glyphicon glyphicon-home"}
+              {:name "About" :link "#/about"}
+              {:name "Member" :link "#/member"}
+              {:name "Photo" :link "#/photo"}
+              {:name "Record" :link "#/record"}
+              {:name "Schedule" :link "#/schedule"}
               {:name "Blog" :link "http://ameblo.jp/kokugakuin-sumo/" :outer true}
-              {:name "Mail" :link "/mail"}
-              {:name "Link" :link "/linklist"}]]
+              {:name "Mail" :link "#/mail"}
+              {:name "Link" :link "#/linklist"}]]
     [:header
      [:div {:id "title" :class "container"}
       [:a {:to "top" :class "jumbotronLayer"}
@@ -51,31 +51,39 @@
               [:a {:href (:link m) :target (when (:outer m) "_blank") :class "visible-xs" :data-toggle "collapse" :data-target ".navbar-collapse"} (:name m)]]))]]]]]))
 
 (defn sidebar []
-  [:div {:id "sidebar"}
-   [:aside
-    [:h2
-     [:span {:id "triangle"} "▼"]"近況"
-     [:span {:class "description"} "Information"]]
-    [:div {:class "inner", :id "info"}
-     "國學院大學相撲同好会は2015年をもって正式に体育会に加盟し、國學院大學相撲部として新たな歴史を刻み始めました。"
-     [:br]
-     "伝統ある國學院大學で伝統ある相撲という競技をやってみませんか？"
-     [:br]
-     "選手もマネージャーも募集してます。学年も国籍も問いません。
+  (reagent/create-class
+   {:component-did-mount
+    #(js/twttr.widgets.load)
+
+    :reagent-render
+    (fn []
+      [:div {:id "sidebar"}
+       [:aside
+        [:h2
+         [:span {:id "triangle"} "▼"]"近況"
+         [:span {:class "description"} "Information"]]
+        [:div {:class "inner", :id "info"}
+         "國學院大學相撲同好会は2015年をもって正式に体育会に加盟し、國學院大學相撲部として新たな歴史を刻み始めました。"
+         [:br]
+         "伝統ある國學院大學で伝統ある相撲という競技をやってみませんか？"
+         [:br]
+         "選手もマネージャーも募集してます。学年も国籍も問いません。
      また、現役部員は全員未経験からスタートしており、相撲未経験者も運動をしたことのないという人でも問題ありません。"
-     [:br]
-     "相撲部で想像出来ないような大学生活を共に送りましょう！"]]
-   [:aside
-    [:h2
-     [:span {:id "triangle"} "▼"]"部員のつぶやき"
-     [:span {:class "description"} "Twitter"]]
-    [:div {:class "inner"}
-     [:a {:class "twitter-timeline", :data-chrome "nofooter", :href "https://twitter.com/kokugakuin_sumo", :data-widget-id "345543580846280704"} "@kokugakuin_sumo からのツイート"]]]
-   [:aside
-    [:h2
-     [:span {:id "triangle"} "▼"]
-     [:a {:id "memberOnly", :href "./memberOnly"} "部員専用ページ"]
-     [:span {:class "description"} "Member Only"]]]])
+         [:br]
+         "相撲部で想像出来ないような大学生活を共に送りましょう！"]]
+       [:aside
+        [:h2
+         [:span {:id "triangle"} "▼"]"部員のつぶやき"
+         [:span {:class "description"} "Twitter"]]
+        [:div {:class "inner"}
+         [:a {:class "twitter-timeline" :href "https://twitter.com/kokugakuin_sumo?ref_src=twsrc%5Etfw"
+              :data-height 1000}
+          "@kokugakuin_sumo からのツイート"]]]
+       [:aside
+        [:h2
+         [:span {:id "triangle"} "▼"]
+         [:a {:id "memberOnly", :href "./memberOnly"} "部員専用ページ"]
+         [:span {:class "description"} "Member Only"]]]])}))
 
 
 (defn footer []
@@ -99,10 +107,10 @@
         [c/row
          [c/col {:xs 12 :md 8 :id "content-area"}
           [c/css-transition-group {:transitionName "content-area"
-                                 :component "div"
-                                 :transitionLeaveTimeout 500
-                                 :transitionEnterTimeout 500
-                                 :transitionLeave false}
+                                   :component "div"
+                                   :transitionLeaveTimeout 500
+                                   :transitionEnterTimeout 500
+                                   :transitionLeave false}
            ^{:key @cp}
            [(@routes-map @cp)]]]
          [c/col {:xs 12 :md 4} [sidebar]]]]

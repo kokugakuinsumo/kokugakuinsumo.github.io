@@ -3,8 +3,8 @@
                  [garden "1.3.2"]
                  [org.clojure/clojurescript "1.9.36"]
                  [reagent "0.6.0-rc" :exclusions [cljsjs/react]]
-                 [reagent-utils "0.1.8"]
-                 [re-frame "0.7.0"]
+                 [reagent-utils "0.1.8" :exclusions [cljsjs/react]]
+                 [re-frame "0.7.0" :exclusions [cljsjs/react]]
                  [secretary "1.2.3"]
                  [venantius/accountant "0.1.7"
                   :exclusions [org.clojure/tools.reader]]
@@ -14,7 +14,7 @@
                  [cljs-ajax "0.5.4"]
                  [cljsjs/jquery "2.1.4-0"]
                  [cljsjs/jquery-ui "1.11.4-0"]
-                 [cljsjs/react-bootstrap "0.29.2-0" :exclusions [org.webjars.bower/jquery]]]
+                 [cljsjs/react-bootstrap "0.29.2-0" :exclusions [org.webjars.bower/jquery cljsjs/react]]]
   :min-lein-version "2.5.3"
   :source-paths ["src/main/clj"]
   :plugins [[lein-cljsbuild "1.1.3"]
@@ -41,7 +41,7 @@
                 :source-paths ["src/main/cljs"]
                 :compiler     {:main            kokugakuinsumo.core
                                :output-to       "resources/public/js/compiled/app.js"
-                               :optimizations   :advanced
+                               :optimizations   :simple
                                :pretty-print    false}}]}
 
   :profiles {:dev {:plugins [[lein-figwheel "0.5.4-3"]]
