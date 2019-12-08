@@ -29,32 +29,31 @@
 
 (defn record-page []
   (create-class
-    {:component-will-mount
-     (fn []
-       (r/dispatch [:get-records]))
-     :reagent-render
-     (fn []
-       (let [datas @(r/subscribe [:records])]
-         (when-not (nil? datas)
-           [:div {:id "record"}
-
-            [c/row
-             [c/col {:xs 12 :md 12}
-              [:h1 "歴代最高戦績"]
-              [:h3 "東日本学生相撲新人選手権大会"]
-              [:p "Cクラストーナメント準優勝（2014年度）"]
-              [:h3 "全国学生相撲新人選手権大会"]
-              [:p "Cクラストーナメント三位入賞（2014年度）"]
-              [:h3 "東日本個人体重別選手権大会"]
-              [:p "柳井 75kg未満級8位入賞（2013年度）"]
-              [:h1 "年度別戦績"]]
-             [c/col {:xs 12 :md 12}
-              [c/tabs {:id "records" :defaultActiveKey 0}
-               (some->> datas
-                        (sort-by :year)
-                        reverse
-                        (map-indexed
-                          (fn [i d]
-                            [c/tab {:eventKey i :title (str (:year d) "年度") :key i}
-                             [record-tab (:records d)]]))
-                        doall)]]]])))}))
+   {:component-will-mount
+    (fn []
+      (r/dispatch [:get-records]))
+    :reagent-render
+    (fn []
+      (let [datas @(r/subscribe [:records])]
+        (when-not (nil? datas)
+          [:div {:id "record"}
+           [c/row
+            [c/col {:xs 12 :md 12}
+             [:h1 "歴代最高戦績"]
+             [:h3 "東日本学生相撲新人選手権大会"]
+             [:p "Cクラストーナメント準優勝（2014年度）"]
+             [:h3 "全国学生相撲新人選手権大会"]
+             [:p "Cクラストーナメント三位入賞（2014年度）"]
+             [:h3 "東日本個人体重別選手権大会"]
+             [:p "柳井 75kg未満級8位入賞（2013年度）"]
+             [:h1 "年度別戦績"]]
+            [c/col {:xs 12 :md 12}
+             [c/tabs {:id "records" :defaultActiveKey 0}
+              (some->> datas
+                       (sort-by :year)
+                       reverse
+                       (map-indexed
+                        (fn [i d]
+                          [c/tab {:eventKey i :title (str (:year d) "年度") :key i}
+                           [record-tab (:records d)]]))
+                       doall)]]]])))}))

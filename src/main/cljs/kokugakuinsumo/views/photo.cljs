@@ -39,22 +39,17 @@
                 {:src "images/photo/22.jpg" :thumbsrc "images/photo/22.jpg" :caption "photo_22"}
                 {:src "images/photo/23.jpg" :thumbsrc "images/photo/23.jpg" :caption "photo_23"}]]
     (create-class
-      {:component-will-mount
-       (fn [])
-       :component-did-mount
-       (fn []
-         (.lightGallery (js/$ "#lightgallery")))
-       :reagent-render
-       (fn []
-         [:div {:id "photo"}
-          [c/row
-           [c/col {:xs 12 :md 12}
-            [:div {:id "lightgallery"}
-             (for [p photos]
-               [:a {:href (:src p) :key (:src p)}
-                [img p]])
-             ]]
-           [c/col {:xs 12 :md 12}
-            [:a {:href "https://picasaweb.google.com/108652702819533941841?gsessionid=QHR5gVsXYcIgkWL9qh2SgQ"}
-             [:p.picasa]]]
-           ]])})))
+     {:component-will-mount
+      (fn [])
+      :component-did-mount
+      (fn []
+        (.lightGallery (js/$ "#lightgallery")))
+      :reagent-render
+      (fn []
+        [:div {:id "photo"}
+         [c/row
+          [c/col {:xs 12 :md 12}
+           [:div {:id "lightgallery"}
+            (for [p photos]
+              [:a {:href (:src p) :key (:src p)}
+               [img p]])]]]])})))

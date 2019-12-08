@@ -34,9 +34,7 @@
          [:span {:class "sr-only"} "Toggle navigation"]
          [:span {:class "icon-bar"}]
          [:span {:class "icon-bar"}]
-         [:span {:class "icon-bar"}]]
-        ;;[:a {:href "/" :class "navbar-brand"} "國學院大學相撲部"]
-        ]
+         [:span {:class "icon-bar"}]]]
        [:div {:class "collapse navbar-collapse" :id "bs-navbar-collapse"}
         [:ul {:class "nav navbar-nav"}
          (for [m menu]
@@ -78,12 +76,7 @@
         [:div {:class "inner"}
          [:a {:class "twitter-timeline" :href "https://twitter.com/kokugakuin_sumo?ref_src=twsrc%5Etfw"
               :data-height 1000}
-          "@kokugakuin_sumo からのツイート"]]]
-       [:aside
-        [:h2
-         [:span {:id "triangle"} "▼"]
-         [:a {:id "memberOnly", :href "./memberOnly"} "部員専用ページ"]
-         [:span {:class "description"} "Member Only"]]]])}))
+          "@kokugakuin_sumo からのツイート"]]]])}))
 
 
 (defn footer []

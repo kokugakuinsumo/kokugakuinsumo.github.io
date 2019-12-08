@@ -129,8 +129,8 @@
      (str (:height member) " / " (:weight member))
      [:h4 (:introductiontitle member)]
      (for [r (-> member
-                  :introductioncontent
-                  (clojure.string/split #"\\n"))]
+                 :introductioncontent
+                 (clojure.string/split #"\\n"))]
        [:div {:key r} [:span r] [:br]])
 
      [:p {:class "toTop", :on-click nil} "部員一覧へ戻る"]]]])
