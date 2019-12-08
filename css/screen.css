@@ -1,0 +1,507 @@
+body {
+  font-family: "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  height: 100%;
+  _overflow: hidden;
+}
+
+body #about .card {
+  transition: .8s;
+  opacity: 0;
+  transform: translate(0,60px);
+}
+
+body #about .card img {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+body #about .card-mv {
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+body #app #content-area .content-area-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+body #app #content-area .content-area-enter.content-area-enter-active {
+  opacity: 1;
+}
+
+body #app #content-area .content-area-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+body #app #content-area .content-area-leave.content-area-leave-active {
+  opacity: 0.01;
+}
+
+body #app #content-area a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+body #app #content-area a:hover {
+  color: #ff0306;
+}
+
+body #app #content-area a:visited {
+  color: black;
+}
+
+body #app header #title {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  padding: 0;
+}
+
+body #app header #title .jumbotronLayer {
+  text-decoration: none;
+}
+
+body #app header #title .jumbotronLayer:hover {
+  text-decoration: none;
+}
+
+body #app header #title .jumbotronLayer .jumbotron {
+  cursor: pointer;
+  border-radius: 0;
+  margin: 0;
+  margin-bottom: -50px;
+  background-image: url(/images/jumbotron.jpg);
+  background-size: 100%;
+  background-position: center 30%;
+  color: white;
+}
+
+body #app header #title .jumbotronLayer .jumbotron h1 {
+  font-size: 50px;
+  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-width: 1px;
+}
+
+body #app header #title .jumbotronLayer .jumbotron p {
+  margin-left: 5px;
+  margin-top: -5px;
+  font-size: 20px;
+}
+
+body #app header #title .jumbotronLayer .jumbotron .social {
+  height: 10px;
+}
+
+body #app header #title .jumbotronLayer .jumbotron .social button {
+  text-align: right;
+  font-size: 15px;
+  width: 70px;
+  padding-right: 10px;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  border: none;
+}
+
+body #app header #title .jumbotronLayer .jumbotron .social button.twitter {
+  margin-left: 5px;
+  background-color: #29AAE1;
+  background-image: url(/images/webicon-twitter.svg);
+}
+
+body #app header #title .jumbotronLayer .jumbotron .social button.facebook {
+  background-color: #293F7E;
+  background-image: url(/images/webicon-facebook.svg);
+}
+
+body #app header .navbar-custom {
+  border: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+body #app header .navbar-custom .navbar-nav {
+  font-size: 15px;
+  margin: 0 auto;
+  display: table;
+  table-layout: fixed;
+  float: none;
+}
+
+body #app header .navbar-custom .navbar-nav li {
+  transition: background-color 0.3s;
+}
+
+body #app header .navbar-custom .navbar-nav li:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+body #app #sidebar aside {
+  background: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+body #app #sidebar aside h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  border-bottom: 5px #594c7b solid;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+body #app #sidebar aside h2 .description {
+  margin-left: 20px;
+  font-size: 60%;
+  color: #ccc;
+  position: relative;
+  top: -5px;
+}
+
+body #app footer {
+  text-align: center;
+  padding: 10px;
+  background: #101010;
+  color: white;
+}
+
+@media screen and (max-width: 750px) {
+
+  
+  
+  body #app header #title {
+    margin-bottom: -15px;
+  }
+  
+  
+  
+  body #app header #title .jumbotronLayer .jumbotron {
+    padding-left: 10px;
+    background-size: 150%;
+    color: white;
+    margin-bottom: -91px;
+  }
+  
+  body #app header #title .jumbotronLayer .jumbotron h1 {
+    margin-top: -20px;
+    font-size: 32px;
+  }
+  
+  body #app header #title .jumbotronLayer .jumbotron p {
+    margin-top: -10px;
+    font-size: 15px;
+  }
+  
+  body #app header #title .jumbotronLayer .jumbotron .social {
+    margin-bottom: -5px;
+  }
+  
+  body #app header .navbar-custom {
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  body #app header .navbar-custom .navbar-nav {
+    font-size: 15px;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
+  }
+  
+  body #app header .navbar-custom .navbar-nav li {
+    transition: background-color 0.3s;
+  }
+  
+  body #app header .navbar-custom .navbar-nav li:hover {
+    background-color: rgba(255,255,255,0.3);
+  }
+
+}
+
+body #linklist .information {
+  padding-left: 0;
+}
+
+body #linklist .information h3 {
+  font-size: 15px;
+  border-bottom: 1px solid #999999;
+  border-left: 6px solid #3cf;
+  line-height: 200%;
+  padding-left: 8px;
+  margin-bottom: 5px;
+}
+
+body #linklist .information h3 a:hover {
+  color: red;
+}
+
+body #linklist img {
+  margin-right: 0;
+  border: 0;
+}
+
+@media screen and (max-width: 750px) {
+
+  body #linklist .information {
+    padding-left: 10px;
+  }
+  
+  body #linklist img {
+    width: 100%;
+  }
+
+}
+
+body #mail {
+
+}
+
+body #member #memberHeader {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+body #member #memberHeader thead tr {
+  background-color: black;
+  color: white;
+}
+
+body #member #memberHeader thead tr th {
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+body #member #memberHeader thead tr td {
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+body #member #memberHeader tbody tr {
+  transition: background-color color 0.1s;
+}
+
+body #member #memberHeader tbody tr:hover {
+  color: red;
+}
+
+body #member #memberHeader tbody tr:nth-child(2n) {
+  background-color: white;
+}
+
+body #member #memberHeader tbody tr:nth-child(2n+1) {
+  background-color: #e0e0e0;
+}
+
+body #member #memberHeader tbody tr:hover {
+  background-color: #d6a8ff;
+  cursor: pointer;
+}
+
+body #member #memberBody .caption h3 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 5px #594c7b solid;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+}
+
+body #member #memberBody .caption h3 span.yomi {
+  margin-left: 10px;
+  font-size: 50%;
+  color: #ccc;
+  position: relative;
+  top: 0px;
+}
+
+body #member #memberBody .caption h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+body #member #memberBody .caption p.toTop {
+  width: 100%;
+  margin-top: 10px;
+  text-align: right;
+  text-decoration: none;
+  vertical-align: bottom;
+  font-weight: bold;
+  transition: color 0.1s;
+}
+
+body #member #memberBody .caption p.toTop:hover {
+  color: red;
+  cursor: pointer;
+}
+
+body #photo a {
+  border-radius: 0px;
+}
+
+body #photo #lightgallery img {
+  width: 24%;
+  margin: 3px;
+  overflow: hidden;
+}
+
+body #photo #lightgallery img.image {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+body #photo #lightgallery img.image-loaded {
+  opacity: 1;
+  -moz-transition: -moz-transform 1s linear;
+  -webkit-transition: -webkit-transform 1s linear;
+  -o-transition: -o-transform 1s linear;
+  -ms-transition: -ms-transform 1s linear;
+  transition: transform 0.1s linear;
+}
+
+body #photo #lightgallery img.image-loaded:hover {
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+body #photo .picasa {
+  vertical-align: middle;
+  background-color: #f0f0f0;
+  margin-top: 10px;
+  background-image: url(/images/picasa.svg);
+  background-repeat: no-repeat;
+  background-position: 3% 50%;
+  border-radius: 5px;
+  background-size: 100px 100px;
+  height: 50px;
+}
+
+@media screen and (max-width: 750px) {
+
+  
+  
+  body #photo #lightgallery img {
+    width: 49%;
+    margin: 1px;
+  }
+
+}
+
+body #record {
+  font-size: 15px;
+}
+
+body #record p {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+body #record .tab {
+  margin-top: 10px;
+}
+
+body #record h2 {
+  margin-top: -3px;
+}
+
+body #record h2 span.attribute {
+  margin-left: 20px;
+  font-size: 70%;
+  color: #ccc;
+  position: relative;
+  top: 0px;
+}
+
+body #record .game {
+  font-size: 18px;
+  margin-bottom: -10px;
+}
+
+body #record .game .win {
+  background-color: #fadbda;
+}
+
+body #record .game h3 {
+  margin-top: -3px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 750px) {
+
+  font-size: 13px;
+  
+  body #record .game {
+    font-size: 13px;
+  }
+  
+  body #record .game h3 {
+    margin-top: -3px;
+    font-size: 20px;
+  }
+
+}
+
+body #schedule {
+
+}
+
+body #top img {
+  margin-bottom: 10px;
+}
+
+body #top table {
+  width: 100%;
+}
+
+body #top table thead {
+  background-color: black;
+}
+
+body #top table thead tr {
+  color: white;
+}
+
+body #top table thead tr th {
+  padding: 3px;
+  padding-left: 5px;
+}
+
+body #top table tbody tr:nth-child(2n) {
+  background-color: white;
+}
+
+body #top table tbody tr:nth-child(2n+1) {
+  background-color: #e0e0e0;
+}
+
+body #top table tbody td {
+  padding: 3px;
+  padding-left: 5px;
+}
+
+body #top table tbody th {
+  padding: 3px;
+  padding-left: 5px;
+}
+
+body #top h3 {
+  font-size: 20px;
+}
+
+body #top ul li {
+  font-size: 16px;
+}
+
+body #top ul li p {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  font-size: 13px;
+  color: gray;
+}
