@@ -172,7 +172,7 @@ body #app footer {
   
   
   body #app header #title {
-    margin-bottom: -15px;
+    margin-bottom: -80px;
   }
   
   
@@ -181,7 +181,8 @@ body #app footer {
     padding-left: 10px;
     background-size: 150%;
     color: white;
-    margin-bottom: -91px;
+    height: 80px;
+    margin-bottom: 0px;
   }
   
   body #app header #title .jumbotronLayer .jumbotron h1 {
@@ -198,9 +199,17 @@ body #app footer {
     margin-bottom: -5px;
   }
   
+  body #app header .navbar-header {
+    height: 80px;
+  }
+  
+  body #app header #bs-navbar-collapse {
+    background-color: rgba(45,31,23);
+  }
+  
   body #app header .navbar-custom {
     border: none;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.1);
   }
   
   body #app header .navbar-custom .navbar-nav {
@@ -213,6 +222,11 @@ body #app footer {
   
   body #app header .navbar-custom .navbar-nav li {
     transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  body #app header .navbar-custom .navbar-nav li a {
+    color: white;
   }
   
   body #app header .navbar-custom .navbar-nav li:hover {
