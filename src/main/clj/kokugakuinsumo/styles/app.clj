@@ -83,24 +83,29 @@
 
    (at-media {:screen true :max-width "750px"}
              [:header
-              [:#title {:margin-bottom "-15px"}
+              [:#title {:margin-bottom "-80px"}
                [:.jumbotronLayer
                 [:.jumbotron {:padding-left "10px"
                               :background-size "150%"
                               :color "white"
-                              :margin-bottom "-91px"}
+                              :height "80px"
+                              :margin-bottom "0px"}
                  [:h1 {:margin-top "-20px"
                        :font-size "32px"}]
                  [:p {:margin-top "-10px"
                       :font-size "15px"}]
                  [:.social {:margin-bottom "-5px"}]]]]
+              [:.navbar-header {:height "80px"}]
+              [:#bs-navbar-collapse {:background-color "rgba(45,31,23)"}]
               [:.navbar-custom {:border "none"
-                                :background-color "rgba(0,0,0,0.5)"}
+                                :background-color "rgba(0,0,0,0.1)"}
                [:.navbar-nav
                 {:font-size "15px"
                  :margin "0 auto"
                  :display "table"
                  :table-layout "fixed"
                  :float "none"}
-                [:li {:transition "background-color 0.3s"}
+                [:li {:transition "background-color 0.3s"
+                      :text-align "center"}
+                 [:a {:color "white"}]
                  [:&:hover {:background-color "rgba(255,255,255,0.3)"}]]]]])])

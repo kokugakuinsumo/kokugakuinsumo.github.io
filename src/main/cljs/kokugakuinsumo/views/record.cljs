@@ -19,7 +19,7 @@
          (str " " (:opponent g) "  " (if individual? (str "(" (:trick g) ")") (str "(" (:nwin g) "勝" (:nlose g) "負)")))]]))])
 
 (defn record-tab [records]
-  [c/row {:class "record"}
+  [c/row {:clasos "record"}
    (for [r records]
      [c/col {:xs 12 :md 12 :key (:date r)}
       [c/thumbnail {:class "record"}
@@ -43,17 +43,17 @@
              [:h3 "東日本学生相撲新人選手権大会"]
              [:p "Cクラストーナメント準優勝（2014年度）"]
              [:h3 "全国学生相撲新人選手権大会"]
-             [:p "Cクラストーナメント三位入賞（2014年度）"]
+             [:p "Cクラストーナメント三位入賞（2014, 2019年度）"]
              [:h3 "東日本個人体重別選手権大会"]
              [:p "柳井 75kg未満級8位入賞（2013年度）"]
              [:h1 "年度別戦績"]]
             [c/col {:xs 12 :md 12}
-             [c/tabs {:id "records" :defaultActiveKey 0}
-              (some->> datas
-                       (sort-by :year)
-                       reverse
-                       (map-indexed
-                        (fn [i d]
-                          [c/tab {:eventKey i :title (str (:year d) "年度") :key i}
-                           [record-tab (:records d)]]))
-                       doall)]]]])))}))
+             (some->> datas
+                      (sort-by :year)
+                      reverse
+                      (map-indexed
+                       (fn [i d]
+                         [:div {:key i}
+                          [:h3 (str (:year d) "年度")]
+                          [record-tab (:records d)]]))
+                      doall)]]])))}))
