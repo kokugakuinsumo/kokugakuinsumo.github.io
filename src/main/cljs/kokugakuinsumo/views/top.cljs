@@ -7,16 +7,16 @@
   (reagent/create-class
    {:component-did-mount
     (fn []
-      (.slick (js/$ ".your-class") (clj->js {:accessibility true
-                                             :autoplay true
-                                             :autoplaySpeed 3000})))
+      (.slick (js/$ ".slick") (clj->js {:accessibility true
+                                        :autoplay true
+                                        :autoplaySpeed 3000})))
 
     :reagent-render
     (fn []
       [:div {:id "top"}
-       [:div.your-class
-        [:div [:img {:src "images/top1.jpg"  :style {:width "100%"}}]]
+       [:div.slick
         [:div [:img {:src "images/top2.jpg"  :style {:width "100%"}}]]
+        [:div [:img {:src "images/top1.jpg"  :style {:width "100%"}}]]
         [:div [:img {:src "images/top3.jpg"  :style {:width "100%"}}]]]
        [:row
         [:h1 "新入部員募集中"]

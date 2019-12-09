@@ -14,9 +14,9 @@
               {:name "Photo" :link "#/photo"}
               {:name "Record" :link "#/record"}
               {:name "Schedule" :link "#/schedule"}
-              {:name "Blog" :link "http://ameblo.jp/kokugakuin-sumo/" :outer true}
+              #_{:name "Blog" :link "http://ameblo.jp/kokugakuin-sumo/" :outer true}
               {:name "Mail" :link "#/mail"}
-              {:name "Link" :link "#/linklist"}]]
+              #_{:name "Link" :link "#/linklist"}]]
     [:header
      [:div {:id "title" :class "container"}
       [:a {:to "top" :class "jumbotronLayer"}
@@ -66,7 +66,7 @@
          "伝統ある國學院大學で伝統ある相撲という競技をやってみませんか？"
          [:br]
          "選手もマネージャーも募集してます。学年も国籍も問いません。
-     また、現役部員は全員未経験からスタートしており、相撲未経験者も運動をしたことのないという人でも問題ありません。"
+     また、相撲未経験者も運動をしたことのないという人でも問題ありません。"
          [:br]
          "相撲部で想像出来ないような大学生活を共に送りましょう！"]]
        [:aside
@@ -81,7 +81,7 @@
 
 (defn footer []
   [:footer {:class "container-fluid"}
-   [:small "Copyright 2012-2017 Kokugakuin University Sumo Club. All Rights Reserved."]])
+   [:small "Copyright 2019-2024 Kokugakuin University Sumo Club. All Rights Reserved."]])
 
 (defn current-page []
   (let [cp         (subscribe [:current-page])
