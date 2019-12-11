@@ -41,6 +41,20 @@
   "introductioncontent":  "元主将です。\\n相撲同好会を立ち上げました。\\n趣味は、太ること、ぶらり途中下車の旅、東海林太郎・三橋美智也・春日八郎など昭和の歌を口ずさむこと、好きな力士は旭鷲山、好きな行司は19代式守伊之助です。"
 },
 {
+  "id":                   "kato",
+  "name":                 "加藤 琢磨",
+  "pronunciation":        "Kato Takuma",
+  "grade":                "4",
+  "post":                 "六代主将",
+  "affiliation":          "神道文化学部神道文化学科",
+  "birthplace":           "横浜市都筑区",
+  "height":               "162cm",
+  "weight":               "114kg",
+  "image":                "images/member/katou.jpg",
+  "introductiontitle":    "",
+  "introductioncontent":  ""
+},
+{
   "id":                   "arai",
   "name":                 "新井 剛",
   "pronunciation":        "Arai Tsuyoshi",
@@ -69,18 +83,16 @@
   "introductioncontent":  "初勝利目指します"
 },
 {
-  "id":                   "kato",
-  "name":                 "加藤 琢磨",
-  "pronunciation":        "Kato Takuma",
-  "grade":                "OB",
-  "post":                 "六代主将",
-  "affiliation":          "神道文化学部神道文化学科",
-  "birthplace":           "横浜市都筑区",
-  "height":               "162cm",
-  "weight":               "114kg",
-  "image":                "images/member/katou.jpg",
-  "introductiontitle":    "",
-  "introductioncontent":  ""
+  "id":                   "nakazato",
+  "name":                 "中里 多聞",
+  "pronunciation":        "Nakazato Tamon",
+  "grade":                "1",
+  "post":                 "-",
+  "affiliation":          "神道文化学部",
+  "birthplace":           "埼玉県",
+  "height":               "177cm",
+  "weight":               "108kg",
+  "image":                "images/member/nakazato.jpg"
 },
 {
   "id":                   "kawano",
