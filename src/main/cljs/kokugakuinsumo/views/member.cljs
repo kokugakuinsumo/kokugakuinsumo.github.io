@@ -14,12 +14,13 @@
       [:span {:class "yomi"} (:pronunciation member)]]
      [:h4 "身長/体重"]
      (str (:height member) " / " (:weight member))
-     [:h4 (:introductiontitle member)]
-     (for [r (-> member
-                 :introductioncontent
-                 (clojure.string/split #"\\n"))]
-       [:div {:key r} [:span r] [:br]])
-
+     (when (:introductiontitle member)
+       [:h4 (:introductiontitle member)])
+     (when (:introductioncontent member)
+       (for [r (-> member
+                   :introductioncontent
+                   (clojure.string/split #"\\n"))]
+         [:div {:key r} [:span r] [:br]]))
      [:p {:class "toTop", :on-click #(.scrollIntoView
                                       (js/document.getElementById "memberHeader")
                                       true)} "部員一覧へ戻る"]]]])
