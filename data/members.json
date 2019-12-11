@@ -82,6 +82,20 @@
   "image":                "images/member/nakazato.jpg"
 },
 {
+  "id":                   "endo",
+  "name":                 "遠藤 浩平",
+  "pronunciation":        "Endo Kohei",
+  "grade":                "1",
+  "post":                 "-",
+  "affiliation":          "法学部",
+  "birthplace":           "茨城県",
+  "height":               "169cm",
+  "weight":               "63kg",
+  "image":                "images/member/endo.jpg",
+  "introductiontitle":    "一言",
+  "introductioncontent":  "金メダルを獲る"
+},
+{
   "id":                   "kawano",
   "name":                 "川野 優作",
   "pronunciation":        "Kawano Yusaku",
