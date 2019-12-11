@@ -1,17 +1,4 @@
-[{
-  "id":                   "hosoya",
-  "name":                 "細谷 辰之",
-  "pronunciation":        "Hosoya Tatsuyuki",
-  "grade":                "-",
-  "post":                 "師範",
-  "affiliation":          "-",
-  "birthplace":           "-",
-  "height":               "-",
-  "weight":               "-",
-  "image":                "images/member/hosoya.jpg",
-  "introductiontitle":    "所属",
-  "introductioncontent":  "名古屋大学相撲部師範\\n國學院大學相撲同好会師範"
-},
+[
 {
   "id":                   "tahara",
   "name":                 "田原 裕子",
