@@ -15,6 +15,8 @@
     (fn []
       [:div {:id "top"}
        [:div.slick
+        [:div [:img {:src "images/top4.jpeg"  :style {:width "100%"}}]]
+        [:div [:img {:src "images/top5.jpeg"  :style {:width "100%"}}]]
         [:div [:img {:src "images/top2.jpg"  :style {:width "100%"}}]]
         [:div [:img {:src "images/top1.jpg"  :style {:width "100%"}}]]
         [:div [:img {:src "images/top3.jpg"  :style {:width "100%"}}]]]
@@ -39,7 +41,8 @@
          [:a {:href "/#/mail"} "gmailアドレス"]" までご連絡下さい。"]
         [:h1 "稽古時間・場所"]
         [c/thumbnail
-         [:p "現在(2015/08)、下記の内容で稽古を行っています。"]
+         [:p "現在(2023/03)、下記の内容で稽古を行っています。"]
+         [:p "※ 長期休暇中は月曜、水曜 10:00‐"]
          [:table
           [:colgroup
            [:col {:width "7%"}]
@@ -55,21 +58,16 @@
           [:tbody
            [:tr
             [:td {:align "center"} "月曜"]
-            [:td "15:00 -"]
-            [:td "筋トレ"]
-            [:td "渋谷キャンパス若木会館3階トレーニング室"]]
+            [:td "18:00 -"]
+            [:td "稽古"]
+            [:td "東京大学駒場キャンパス 相撲場"]]
            [:tr
             [:td {:align "center"} "水曜"]
             [:td "18:00 -"]
-            [:td "東大出稽古"]
-            [:td "京王井の頭線駒場東大前駅"]]
-           [:tr
-            [:td {:align "center"} "木曜"]
-            [:td "18:20 -"]
-            [:td "渋谷区スポーツセンター土俵稽古"]
-            [:td "京王新線幡ヶ谷駅"]]
+            [:td "稽古"]
+            [:td "東京大学駒場キャンパス 相撲場"]]
            [:tr
             [:td {:align "center"} "土曜"]
-            [:td "13:40 -"]
-            [:td "渋谷区スポーツセンター土俵稽古"]
-            [:td "京王新線幡ヶ谷駅"]]]]]]])}))
+            [:td "10:00 -"]
+            [:td "稽古"]
+            [:td "東京大学駒場キャンパス 相撲場"]]]]]]])}))
