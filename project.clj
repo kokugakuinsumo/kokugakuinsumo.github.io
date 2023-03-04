@@ -1,7 +1,7 @@
 (defproject kokugakuinsumo/web "1.0.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.9.0-alpha5"]
                  [garden "1.3.2"]
-                 [org.clojure/clojurescript "1.9.36"]
+                 [org.clojure/clojurescript "1.11.60"]
                  [reagent "0.6.0-rc" :exclusions [cljsjs/react]]
                  [reagent-utils "0.1.8" :exclusions [cljsjs/react]]
                  [re-frame "0.7.0" :exclusions [cljsjs/react]]

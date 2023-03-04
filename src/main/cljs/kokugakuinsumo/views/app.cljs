@@ -74,9 +74,9 @@
          [:span {:id "triangle"} "▼"]"部員のつぶやき"
          [:span {:class "description"} "Twitter"]]
         [:div {:class "inner"}
-         [:a {:class "twitter-timeline" :href "https://twitter.com/kokugakuin_sumo?ref_src=twsrc%5Etfw"
+         [:a {:class "twitter-timeline" :href "https://twitter.com/kokupyonsumo?ref_src=twsrc%5Etfw"
               :data-height 1000}
-          "@kokugakuin_sumo からのツイート"]]]])}))
+          "@kokupyonsumo からのツイート"]]]])}))
 
 
 (defn footer []
