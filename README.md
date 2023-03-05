@@ -13,8 +13,20 @@ $ lein garden auto
 
 * view
 
-src/main/cljs/kokugakuinsumo/views/*.cljs
+`src/main/cljs/kokugakuinsumo/views/*.cljs`
 
 * style
 
-src/main/clj/kokugakuinsumo/styles/*.clj
+`src/main/clj/kokugakuinsumo/styles/*.clj`
+
+## Deploy
+
+Uses peaceiris/actions-gh-pages@v2.5.1 in Github actions.
+
+If it doesn't work, In source branch
+
+```
+lein do clean, garden once, cljsbuild once min
+```
+
+Then copy all files under ./resources/public to master branch and push.
