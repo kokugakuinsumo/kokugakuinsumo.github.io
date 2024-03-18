@@ -21,7 +21,7 @@
         [:div [:img {:src "images/top1.jpg"  :style {:width "100%"}}]]
         [:div [:img {:src "images/top3.jpg"  :style {:width "100%"}}]]]
        [:row
-        [:h1 "新入部員募集中"]
+        [:h1 "新入部員募集中!!"]
         [c/thumbnail "國學院大學相撲部は常に新入部員を募集してます。"
          [:br]
          "「大学で何かやってみたい」と考えて入学してきたもののどのサークルも物足りない。\n
