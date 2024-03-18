@@ -14,6 +14,12 @@
     :reagent-render
     (fn []
       [:div {:id "top"}
+       [:h2 "國學院大學相撲部ホームページは移転しました。" [:br]
+        "新しい URL は"
+        [:a {:href "https://kokugakuinsumo.jimdofree.com/"
+             :style {:color "#0000EE" :text-decoration "underline"}} "こちら"]]
+       [:br]
+       [:br]
        [:div.slick
         [:div [:img {:src "images/top4.jpeg"  :style {:width "100%"}}]]
         [:div [:img {:src "images/top5.jpeg"  :style {:width "100%"}}]]
